@@ -35,8 +35,8 @@ await page.locator('[data-action=close]').first().evaluate(e=>e.click());
 await page.locator(`[data-action=player][data-id="${owner}"]`).evaluate(e=>e.click());
 assert.equal(await page.locator('[data-action=room-guest]').count(),1,'occupied room exposes guest detail');await page.locator('[data-action=room-guest]').click();assert.equal(await page.locator('#modal-title').textContent(),GUESTS[59].name);await page.locator('[data-action=close]').first().click();
 await page.locator(`[data-action=player][data-id="${opponent.id}"]`).click();await page.locator('[data-action=room-guest]').click();assert.match(await page.locator('.modal').textContent(),/入住客人未记录/);await page.locator('[data-action=close]').first().click();
-const sound=page.locator('[data-action=sound-toggle]');assert.equal(await sound.getAttribute('aria-pressed'),'true');await sound.click();assert.equal(await page.locator('[data-action=sound-toggle]').getAttribute('aria-pressed'),'false');
-checks.push({width,name:'occupied guest, legacy unknown, and sound toggle',pass:true});
+assert.equal(await page.locator('[data-action=sound-toggle]').count(),0);
+checks.push({width,name:'occupied guest, legacy unknown, and sound toggle absent',pass:true});
 await page.screenshot({path:path.join(output,`scroll-${width}.png`)});await context.close();}
 }catch(error){errors.push(error.stack||String(error));}finally{await browser.close();await app.close();await rm(dir,{recursive:true,force:true});}
 const report={status:checks.every(c=>c.pass)&&!errors.length?'passed':'failed',browser:'real Chrome',mockedRoutes:false,layoutStress:'Horizontal markets/player tabs, staff/effects lists and quantity/select modals use test-only overflow size constraints; setup modal, log and document also exercise natural scrolling.',checks,errors};await writeFile(path.join(output,'scroll-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));if(report.status!=='passed')process.exitCode=1;
