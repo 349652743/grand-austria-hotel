@@ -7,6 +7,7 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import path from 'node:path';
 import os from 'node:os';
 import {createGame,act,view} from './engine.mjs';
+import {undoView,rememberUndo,restoreUndo} from './undo.mjs';
 
 const ROOT=path.dirname(fileURLToPath(import.meta.url));
 import {runtimePaths} from './paths.mjs';
@@ -23,7 +24,7 @@ export async function createApp({dataDir=runtimePaths().dataDir,rateLimit=600}={
  try {rooms=JSON.parse(await readFile(save,'utf8'));}catch(e){if(e.code!=='ENOENT'){lock.close();throw new Error(`无法读取存档，未覆盖原文件：${e.message}`);}}
  const streams=new Map(),limits=new Map();let mutation=Promise.resolve();
  const connected=(code,id)=>[...(streams.get(code)||[])].some(c=>c.player===id);
- const roomView=(r,player)=>({code:r.code,host:r.host,revision:r.revision,you:player,created:r.created,seats:r.seats.map(s=>({id:s.id,name:s.name,ready:s.ready,online:connected(r.code,s.id)})),game:view(r.game,player)});
+ const roomView=(r,player)=>({code:r.code,host:r.host,revision:r.revision,you:player,created:r.created,seats:r.seats.map(s=>({id:s.id,name:s.name,ready:s.ready,online:connected(r.code,s.id)})),game:view(r.game,player),undo:undoView(r,player)});
  const broadcast=code=>{const r=rooms[code];for(const c of streams.get(code)||[]){if(!r?.seats.some(s=>s.id===c.player)){streams.get(code).delete(c);c.res.end();}else c.res.write(`event: state\ndata: ${JSON.stringify(roomView(r,c.player))}\n\n`);}};
  async function persist(next){const tmp=save+'.tmp';await writeFile(tmp,JSON.stringify(next),'utf8');await rename(tmp,save);rooms=next;}
  async function body(req){const chunks=[];let size=0;for await(const chunk of req){size+=chunk.length;if(size>32768)throw fail('请求过大',413);chunks.push(chunk);}try{return JSON.parse(Buffer.concat(chunks).toString('utf8')||'{}');}catch{throw fail('无效 JSON');}}
@@ -88,8 +89,10 @@ export async function createApp({dataDir=runtimePaths().dataDir,rateLimit=600}={
     if(a.type==='ready'){if(r.game)throw fail('比赛已开始');seat.ready=!seat.ready;}
     else if(a.type==='start'){if(seat.id!==r.host)throw fail('只有房主可以开始');if(r.game)throw fail('比赛已开始');if(r.seats.length<2||r.seats.some(s=>!s.ready))throw fail('至少 2 人且所有玩家准备后才可开始');r.game=createGame(r.seats,randomInt(1,4294967295));}
     else if(a.type==='leave'){if(r.game)throw fail('进行中的席位保留，关闭页面后可用原浏览器继续');r.seats=r.seats.filter(s=>s.id!==seat.id);if(!r.seats.length){delete next[code];await persist(next);broadcast(code);return {left:true};}if(r.host===seat.id)r.host=r.seats[0].id;}
-    else {if(!r.game)throw fail('比赛尚未开始');r.game=act(r.game,seat.id,a);}
-    r.revision++;r.receipts[receipt]=r.revision;const keys=Object.keys(r.receipts);for(const key of keys.slice(0,Math.max(0,keys.length-1000)))delete r.receipts[key];
+    else if(a.type==='undo'){restoreUndo(r,seat.id);}
+    else {if(!r.game)throw fail('比赛尚未开始');const before=r.game;r.game=act(before,seat.id,a);rememberUndo(r,before,seat.id);}
+    // Keep consumed IDs for this room's lifetime: pruning permits re-execution after undo.
+    r.revision++;r.receipts[receipt]=r.revision;
     await persist(next);broadcast(code);return a.type==='leave'?{left:true}:roomView(r,seat.id);
    });
    mutation=task.catch(()=>{});json(res,200,await task);
