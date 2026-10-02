@@ -1,0 +1,860 @@
+[
+  {
+    "file": "guestSculptor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestSculptor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "2aa888d0fc430c65ad897c39dadba7f7b0c256ca63f48f5ebc0d37549df0ba0b",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestMusician.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestMusician.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "eb8d78a4e599792b30c55ae0bdf69249781f128f3bde6b06d075cf56837a4656",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestComposer.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestComposer.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "4c5661d0d0dc262e214c6940ff74392e2d3ce94212927eab4c01d0fd3a28acc3",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestTailor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestTailor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "61982915b4576400654197d920de5beacb731593d67e9e22d73459e15df5680a",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestDancer.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestDancer.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "1221da78fb04e9cfdb631395dbc46b411f4aee618c2fcb706d8c76de1d43befa",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestPortraitPainter.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestPortraitPainter.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "8e43e86f06dc0489bcc6e9f6eb711ce941ae051067af6ae821514de7f2010393",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestPhotographer.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestPhotographer.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "54bff3cfe39785f1015e0a83b02fdb752243592d311750ac69cc92d1f8765303",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestVocalist.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestVocalist.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "3ab81f4d73f404185c6c6438e4050a088c6dbc0dc25bedf1581c413633a9b1c6",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestArchitect.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestArchitect.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "d0a9d2f8e688318cb5c2443c1b95a376738aefba10c1ffd3c9826d0ba9ca9665",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestActress.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestActress.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "4d3dcdd7af129579e0ec39a9b226b909b269d43b97c5134d55dc1cacb415945e",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestPoet.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestPoet.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "47157fd24febb29fffc93d800d107b4fd13f47b1611d985773970199239fdd87",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestJewelryDesigner.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestJewelryDesigner.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "521b87a07a028affc0fe50e7fda4c50841d946941fc10067b266b17ee5ed8620",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestPainter.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestPainter.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "96eccd7dfd92a04e45cad63f3b5c34e7fc0cc9e1c37ad3f5710f95feb5b1ba91",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestOperaSinger.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestOperaSinger.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "17f2aa1618c4cf0298d361b24d86464344b5eb0cdb9121db5dea5bf84d47a17c",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestDame.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestDame.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "21764a20c7ff1daf2cab124b246a59f00f93f7d802a4f01378068beed25dc0db",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestDuchess.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestDuchess.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "aafad1582eeb6d9581021e7562b7e5243bff03abed701d0cdf3dd321c1e4b261",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestKnightOfTheEmpire.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestKnightOfTheEmpire.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "b3358f49729a9728f90fe8c94de381f89e14fbb29e94e7088af0a76d9f56bfe7",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestLandgrave.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestLandgrave.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "24e640caab5035431deb07b86fdf5cfc4af0d3bd4ea32cb8e47d62b0f2c2490a",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestSovereign.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestSovereign.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "8d5879c9e179d53318e247d63169d9b8bf2c9bbf397c347dc136b965319e0659",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestPrincess.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestPrincess.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "680c348469def38e9f5b040cf48469fdb9e65c2340f0736a960f99ebbded7119",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestCountess.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestCountess.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "c30fb11a56e9bc12c5574ae2c2315c199bc7ba96ec70a5100bc85ebd7828c364",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestElector.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestElector.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "cd6e183280cd7a027aaf9ada8e32b688443553d689100a7ca7871c4c7466a1c7",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestBaron.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestBaron.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "75177b4fa52ead1d24fe090c198fd14d6d74afee536d1d1d9e22972c9174a000",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestPrince.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestPrince.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "e0a293a6eb256351c45127408dd9645fe780423da5b89e5cf3401f88be861a8d",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestCount.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestCount.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "1b2337a245d7666b6be7187d12c54e2cfd6a67a712e371536c2eeae97743aa8b",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestEarl.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestEarl.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "57b1fad4bcd7745aca78103c8306378e429484f15b8012dbd0400f32da233d19",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestBaroness.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestBaroness.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "94f10c6e7f85002734c7a89b30a4c7ab0679f5fa1736b91ec3c89fb78d137dde",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestDuke.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestDuke.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "ae0015595c57f2c7f5b024b189c21d2e3a40ebf7a2dfa69e8b159333844aa95c",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestApothecary.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestApothecary.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "24be0dee18200f606564b0d0d92a1200b6bd613675d76cbb92600491e80bb81d",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestPostCouncillor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestPostCouncillor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "91c574cb9ce9c72b1af1b518c5080a27cc0d0574c2df4fff202466ddda5bb078",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestPrivyCouncillor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestPrivyCouncillor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "c3ae68f179a80466d61f4156ce7288ae861464003a6e5be242222c70f73438d6",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestProfessorEmeritus.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestProfessorEmeritus.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "8dd2d66a2071459fad324d5c4ec7062196336fed24f2fabc0f0938611cef4c54",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestGeneral.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestGeneral.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "ef226143cf86e32776f2d665489b87f2b28159725c89202fe2a1a1a8c8bdafb5",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestSeniorCouncillor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestSeniorCouncillor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "6837bd7554a2f1067a8fa197b185b2773596f237ac21b1d5a759d6239a9accc9",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestCouncillorOfCommerce.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestCouncillorOfCommerce.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "ca9ddac5fdcf1f25767f567fa1ea09a56f9803cc1d63005914d6c983e759b0bc",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestCourtCounsellor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestCourtCounsellor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "86307d88734823b76b4f5cfa0763b30f4cfab4a9037169dc65c3b890aa11ce58",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestMajor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestMajor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "c7d0a14203b915aeae43f98c68c662a0cd57d5cc4febadac66613ec59f4e2eeb",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestVeterinaryCouncillor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestVeterinaryCouncillor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "530ae5078e35d683c6e5045dd6662d252eaf1d6ba9913d11c76656bb2da22288",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestMedicinalCouncillor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestMedicinalCouncillor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "a798fbddaea5619bf3272b31057dac384b799dfa336c3bc55c620ce7a257c344",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestProcurator.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestProcurator.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "1b29f5e561d11c32925a29a1004d4d0151b2c8508f52ef60b98f7d66ad951e64",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestLordHighCommissioner.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestLordHighCommissioner.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "c80cb45bfa963dde2f8d65cb54313087541c33fcceece883c0c0a91e51bf84b0",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestSeniorLegalSecretary.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestSeniorLegalSecretary.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "93d0835e3f677e0cf92cb2d251a6f83b84e5a58676048550c3174fc4c761c2c9",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestTezcatlipoca.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestTezcatlipoca.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "a7fb143f9caa29f19530653bb12407057bbaa703251165e880dfe77307349aec",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestCaptGoldhaken.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestCaptGoldhaken.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "5e73e940879f12310fd5ac34c09bf89dba8dd5f965b0c53a6fad4fb7e76fbe78",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestMrHorsa.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestMrHorsa.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "54c256c88c82429987a725b5ece6b61de875ce209abbf2b19e49736b12c9c468",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestMichaelIngalls.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestMichaelIngalls.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "bd34920b3fb7e04fad69bedf79a405fa0f491483f900dfc29ad34a8b48ec573e",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestMrBoydell.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestMrBoydell.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "cb51499e9a82aca24a72ec98036be235ab16038c837098c8388a94c0f591b267",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestMrOundo.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestMrOundo.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "83a586317455a31bd22da5657d89a0e526d6694624a831afb99e9910f7f9f0ce",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestEGizia.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestEGizia.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "812b92a326a68d067ff5f3fac5d4b752843e9fbeffcd0ea24e190e0083b89f67",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestMPolo.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestMPolo.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "15c0c098957f9b96471b85ce2d55ac23253813bff6f114182f594982a17f8025",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestCramersopholus.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestCramersopholus.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "f872f0dd1d114ce146545299057ed026394a1420f07e8b3aa7c8aacd9b2b3f60",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestFarmerFranz.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestFarmerFranz.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "08aebf0781a4269b8289acfb1a18ca1a1f4ab9b553000c2625b1dfa95760a167",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestBrotherUwe.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestBrotherUwe.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "65b84883a164ac0f8154819d6aae6c7b1eeac38ff35a472b7da6aac5efc2d52c",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestConductor.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestConductor.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "1297edf2a94625eae0d2c296c8cafddd5d1cc97111fdcecad879a052933e2b76",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestDurgoing.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestDurgoing.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "0cfe64e150e69e239eeebdfa758839256f48a9a8ef5ace119bdfc737a20f1b8d",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "guestMacLeod.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/guestMacLeod.gif",
+    "width": 188,
+    "height": 288,
+    "sha256": "184eb255b5d375be09c79ae0a9758cda931d44252a3289d2191c1b63359c29d1",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffBreakfastServer.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffBreakfastServer.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "ad9b8f074d6070f0f8659f4f8a24e61eea471445b710249ed8585de70d2e5f34",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffWaitress.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffWaitress.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "2eff3ca06b7994ab456f034c56b4895af4b46e5a56ea4d2f3f92ee3278ddc89f",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffBarkeeper.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffBarkeeper.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "78d5ad6f76140d28ffa9d6759b97e533b9e6dbbb741051d79f400f386d5367ac",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffSousChef.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffSousChef.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "0bc6121a3e4294d5121a4557c3f723112ad759700f23a9e027e35e0fe946d408",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffGroom.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffGroom.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "534673b01cafd0b8f267fa5393c6200397f6fca9abca8feff259b4f2045557e6",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffStableman.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffStableman.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "0ec725d7545fd74b392c13c82d260d7cd960b209e90df2446131ff9d942b0dbf",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffMasseuse.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffMasseuse.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "d7c96fe3bdaf317a4aedfce1075249d9199151fe4a14b2d3f82ec4afadbeaf24",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffTourGuide.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffTourGuide.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "b001bc710ba96545a8feb132f76dcd4f5010caaa9752c69874144a5383c98bc9",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffButler.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffButler.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "547a4a7fc2571ca76507414686eed310b0869c830c7cf306de76ae0437f913c3",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffChauffeur.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffChauffeur.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "952b7b255a304e7c6ae1721c80b3c4982f277c386c942a089db4350f7a6f234e",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffFlorist.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffFlorist.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "389fc91a46531e650bf80447de2b119e1cacf206e2ec55bef248a0725455ef01",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffExecutiveHousekeeper.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffExecutiveHousekeeper.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "38c0a0a6dcdc3295f2b84833d3bad098b9758ae3644212a14bf37502980194ce",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffRestaurantManager.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffRestaurantManager.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "21cea96ee26a2468dd9d948e95c3733cb091bceb1b45046aa3e8004b919d523d",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffDecorator.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffDecorator.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "961f2f0f539c968dc7c19cebd34c6ef5faaa35489fceb27a1e7db561eead81d3",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffBootblack.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffBootblack.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "86299251c78b8d5520047299725a50824f3061fccc4f86c004f9d05af56df79c",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffLaundress.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffLaundress.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "d0264dbedb335735a30b56da44f98331b0bd98701bb57190ab855e4bb3818752",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffKitchenHand5.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffKitchenHand5.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "a655151b7da88d63bfd8cce9b9b2bbe42a0c4265f6ca643733f2b265e42f2372",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffChecker.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffChecker.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "8d66bbd16bee01759c77416ef0658deae4e3a62dbc5458f8f7e89181469e8d79",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffInteriorArchitect.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffInteriorArchitect.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "f3055da9efa513869240ef68b027c9dbfe2977982be7d613f72da6fd8bd75eab",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffDetective.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffDetective.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "1e4eef66d498d1bfcd79b6ac33df6328d44929b936921fae05c4e8d7bf690ab5",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffChef.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffChef.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "d106e6f08f739d0689ec036f2f5a1bfa24f1c515759e7be48b1a0b7a028642e6",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffStaffManager.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffStaffManager.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "e81edc36dd7f53b736e0b7e0e177b1e91b3e15c16becb32e616808fab8de0cb4",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffCustodian.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffCustodian.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "78ad70bee3f2e9dc8c40d363ea80e4479fb85c1404186430ad53172c96d83116",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffChiefWaiter.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffChiefWaiter.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "71bea4516273e8c3e714e7475e771227dae758d12c70c77c32fcc0345efc576a",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffDeliveryBoy.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffDeliveryBoy.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "312b7cda55caadd9f2c28cac249b04d5cf4b22493966ed155e48ce0da1a35962",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffConferenceManager.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffConferenceManager.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "fdaf5260325d58703c2123fba6e3b0f2ace78af1b4c82bfc6d4020ae1f39b254",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffBookingManager.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffBookingManager.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "9810648f97e759bbaf0cd622cfa155ba3969aaea028b027c5dc7b9e1b00e3b1f",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffConcierge.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffConcierge.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "4c78d3be8ffd8cfd3c2e64717c418d879549b030688aed6aff0390f7362569d3",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffSecretary.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffSecretary.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "787e518e081b8ec3675170b374bcb02516a1413387305721501ba905abed068f",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffReceptionClerk.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffReceptionClerk.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "a78081a05e81a42f6b804b11ee560b6903090baac8d1e77474fcd12721ab4627",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffChambermaid.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffChambermaid.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "c492179c4f96a7f37421db7703d919087105adc316bc3e54cb72fed8d627571a",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffAssistantManager.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffAssistantManager.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "791a97e5a2f8683c265a6e300bc3213d7841c6920cabe0ed7c205c474704f026",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffMaleFloorHousekeeper.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffMaleFloorHousekeeper.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "cd80c7db6da2cef7a22b6323d6a1c0641fd4a99e78b21a66aa9690a9ee2a35ff",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffReceptionist.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffReceptionist.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "4fff84a80190b0cd68bd905d5b7ce38479d8187b53acc19f00315ab037b3aec9",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffPageboy.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffPageboy.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "b0e6006f782fc1f3ab1b2278ed70be925f4966f23c96860ca3f4e81b15963d50",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffSommelier.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffSommelier.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "92617d7d7053ea274aa3e06ec1272ee065bf7bca84c840a9757882268fe08571",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffRoomService.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffRoomService.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "9152c3f4e2cff4f52f23c88d7199aec4646c5de01e58f650c7bd2d4ac26874f9",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffPorter.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffPorter.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "b1635ce7ff0ce63f77b6ca12b9bfd9fb316cf5fd63ad40e9ea5626f98c864344",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffConfectioner.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffConfectioner.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "5f17677fe7162aa6b44dad0982992e4397e1ea2bc2fdd6d5a729678207dd1edf",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffMarketingDirector.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffMarketingDirector.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "1be5dab86eef32be0ce44bb18581507476e6deab3daab55f977a9f41264ae816",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffOperator.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffOperator.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "10e940a46ad25f6dd01ad0e21312b4a677c03a6ec01c43c722d00c1daa25ce02",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffGardener.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffGardener.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "f3fbd77966641f7c3cc3253776093d7475a97758e3426c9e1737a7f248a7e1c9",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffBarista.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffBarista.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "66877a12529a3d2bd5aaa25c0cbd95b64d3d9e594c111241b86f83e77c6f7f3b",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffLarderCook.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffLarderCook.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "e941ace6809adf10920ad4db7d1744b57050947063d2cedb4d7326ae4023acbe",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffPoolAttendant.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffPoolAttendant.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "b1d0ad6969c6dce3368311342621f503eea3a2bca4baefe2eb48ad3933941b2e",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffFemaleFloorHousekeeper.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffFemaleFloorHousekeeper.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "30e4e8f055798626e4009129bade5c5beb51a496f869db24cf9639e5b142c1a0",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffLiftboy.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffLiftboy.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "ffb2ea0304477fa3eeeaedf4d605e93b201e1e809ada0e0105aec7c17d5eff15",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "staffHotelManager.gif",
+    "url": "https://www.yucata.de/game-plugins/grandaustria/1.0.2/images/staffHotelManager.gif",
+    "width": 153,
+    "height": 144,
+    "sha256": "2435941fd3d86a82a4a2eadbe56c831d486b78a7295858efe940480e99e8868d",
+    "rights": "Klemens Franz / atelier198 / Lookout Games. Open redistribution license not verified; private local prototype."
+  },
+  {
+    "file": "cover.webp",
+    "url": "https://www.lookout-spiele.de/upload/de_grandaustriahotel.html_GAH_Retail21_Rules_152_EN_WEB.pdf",
+    "sourcePage": 1,
+    "width": 1489,
+    "height": 2105,
+    "embeddedSourceSizes": [
+      [
+        830,
+        1173
+      ],
+      [
+        892,
+        1263
+      ]
+    ],
+    "note": "Rendered size; not native print-resolution artwork.",
+    "sha256": "675ca9e4df6f43faba4b47acc0707dc776bd1b166637eae8c170134f91024b6d",
+    "rights": "Klemens Franz / atelier198 / Lookout Games; no open license verified."
+  },
+  {
+    "file": "mark.svg",
+    "url": null,
+    "creator": "Original code-native SVG made for this project",
+    "sha256": "022b79e4ca9f28cb09dab50211eef044e66194342cc81b4123ce51adefa5cfe2"
+  }
+]
