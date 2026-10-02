@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+
+function platform(saved){const handlers={},storage=new Map(saved===undefined?[]:[['gah.sound',saved]]),stats={contexts:0,starts:0,peaks:[],stops:[]};let now=1000;
+ class AudioContext{constructor(){stats.contexts++;this.state='running';this.currentTime=0;this.destination={};}resume(){return Promise.resolve();}createOscillator(){return {type:'sine',frequency:{setValueAtTime(){}},connect(){},disconnect(){},start(){stats.starts++;},stop(t){stats.stops.push(t);}};}createGain(){return {gain:{setValueAtTime(v){stats.peaks.push(v);},linearRampToValueAtTime(v){stats.peaks.push(v);},exponentialRampToValueAtTime(v){stats.peaks.push(v);}},connect(){},disconnect(){}};}}
+ return {scope:{AudioContext,document:{visibilityState:'visible',addEventListener(name,fn){handlers[name]=fn;}},localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},performance:{now:()=>now}},stats,gesture:()=>handlers.pointerdown({isTrusted:true}),advance:()=>now+=1000};}
+
+test('subtle feedback audio is gesture gated, bounded, muted and failure safe',async()=>{
+ const module=await import('../public/sound.mjs').catch(()=>null);assert.ok(module?.createFeedbackAudio,'sound module must expose independently testable controller');
+ const f=platform(),audio=module.createFeedbackAudio(f.scope);assert.equal(audio.soundEnabled(),true);assert.equal(audio.playFeedback('checkin'),false);assert.equal(f.stats.contexts,0);f.gesture();assert.equal(audio.playFeedback('checkin'),true);assert.ok(f.stats.starts>0);assert.ok(Math.max(...f.stats.peaks)<=0.04);assert.ok(Math.max(...f.stats.stops)<=0.3);const count=f.stats.starts;assert.equal(audio.playFeedback('die'),false,'throttles immediate repeats');assert.equal(f.stats.starts,count);audio.setSoundEnabled(false);f.advance();assert.equal(audio.playFeedback('serve'),false);assert.equal(f.scope.localStorage.getItem('gah.sound'),'off');const muted=platform('off');const mutedAudio=module.createFeedbackAudio(muted.scope);muted.gesture();assert.equal(muted.stats.contexts,0);assert.equal(mutedAudio.soundEnabled(),false);mutedAudio.setSoundEnabled(true);muted.gesture();assert.equal(mutedAudio.playFeedback('undo'),true);assert.equal(module.createFeedbackAudio({}).playFeedback('die'),false);
+});

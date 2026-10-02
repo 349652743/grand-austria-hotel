@@ -45,26 +45,26 @@ test('consumed request IDs remain spent beyond the old 1000-receipt window',asyn
  await f.action(p,safeDie(g));await f.action(p,{type:'undo'});
  const r=await f.action(p,safeDie(g),1002,'historical-0');assert.equal(r.status,200);assert.equal(r.data.revision,1002);assert.deepEqual(r.data.game,view(g,p));
 });
-test('single latest snapshot persists, restores after restart, and never leaks via HTTP/SSE',async t=>{
+test('current-turn stack persists, restores twice after restart, and never leaks via HTTP/SSE',async t=>{
  const g=ready(),p=actor(g),q=seats.find(s=>s.id!==p).id,f=await fixture(t,g);
  const first=act(g,p,safeDie(g));assert.equal((await f.action(p,safeDie(g))).status,200);
  const next=decide(first),second=await f.action(p,next);assert.equal(second.status,200);assert.equal(second.data.undo.available,true);
  const raw=JSON.parse(await readFile(path.join(f.dir,'rooms.json'),'utf8')).ABCDEF;
- assert.deepEqual(Object.keys(raw.undoHistory).sort(),['game','player']);assert.deepEqual(raw.undoHistory.game,first);assert.equal(raw.undoHistory.game.undoHistory,undefined);
+ assert.equal(raw.undoStack.length,2);for(const h of raw.undoStack){assert.deepEqual(Object.keys(h).sort(),['game','player']);assert.equal(h.game.undoHistory,undefined);assert.equal(h.game.undoStack,undefined);}assert.deepEqual(raw.undoStack[1].game,first);
  await f.restart();assert.equal((await f.state(p)).undo.available,true);
  const streams=[];
  async function listen(who){const response=await f.events(who),reader=response.body.getReader();streams.push(reader);let buffer='';return async revision=>{for(;;){let cut;while((cut=buffer.indexOf('\n\n'))>=0){const frame=buffer.slice(0,cut);buffer=buffer.slice(cut+2);const data=frame.split('\n').find(l=>l.startsWith('data: '));if(data){const value=JSON.parse(data.slice(6));if(value.revision===revision)return value;}}const {value,done}=await reader.read();assert.equal(done,false);buffer+=new TextDecoder().decode(value);}};}
  const ownerStream=await listen(p),otherStream=await listen(q);t.after(()=>Promise.all(streams.map(r=>r.cancel().catch(()=>{}))));
  const r=await f.action(p,{type:'undo'});assert.equal(r.status,200);assert.deepEqual(r.data.game,view(first,p));
  const states=await Promise.all([ownerStream(3),otherStream(3),f.state(p),f.state(q)]);
- for(const s of states){assert.equal(s.revision,3);assert.equal(s.undo.available,false);assert.equal(s.undoHistory,undefined);assert.equal(s.receipts,undefined);assert.equal(s.game.undoHistory,undefined);assert.equal(s.game.rng,undefined);assert.equal(s.game.staffDeck,undefined);assert.ok(s.seats.every(x=>!x.token));assert.ok(s.game.players.every(x=>x.id===s.you||x.hand===undefined));assert.ok(!JSON.stringify(s).includes(seats[0].token));}
- await Promise.all(streams.map(r=>r.cancel()));await f.restart();assert.equal((await f.action(p,{type:'undo'})).status,400);
+ for(const s of states){assert.equal(s.revision,3);assert.equal(s.undo.available,s.you===p);assert.equal(s.undo.remaining,s.you===p?1:0);assert.equal(s.undoStack,undefined);assert.equal(s.undoHistory,undefined);assert.equal(s.receipts,undefined);assert.equal(s.game.undoHistory,undefined);assert.equal(s.game.undoStack,undefined);assert.equal(s.game.rng,undefined);assert.equal(s.game.staffDeck,undefined);assert.ok(s.seats.every(x=>!x.token));assert.ok(s.game.players.every(x=>x.id===s.you||x.hand===undefined));assert.ok(!JSON.stringify(s).includes(seats[0].token));}
+ await Promise.all(streams.map(r=>r.cancel()));await f.restart();const last=await f.action(p,{type:'undo'});assert.equal(last.status,200);assert.deepEqual(last.data.game,view(g,p));assert.equal(last.data.undo.remaining,0);assert.equal((await f.action(p,{type:'undo'})).status,400);
 });
 test('food allocation and funds resolution undo to exact legal engine state',async t=>{
  const cases=[legalPath((g,a)=>g.phase==='playing'&&a.type==='serve'),legalPath((g,a)=>g.phase==='playing'&&g.pending[0]?.effects[a.index]?.type==='funds'),legalPath((g,a)=>g.phase==='playing'&&g.pending[0]?.effects[a.index]?.type==='dishes')];
  for(const {g,p,a,after} of cases){const f=await fixture(t,g),r=await f.action(p,a);assert.equal(r.status,200);assert.deepEqual(r.data.game,view(after,p));assert.equal(r.data.undo.available,true);const undo=await f.action(p,{type:'undo'});assert.equal(undo.status,200);assert.deepEqual(undo.data.game,view(g,p));}
 });
-test('hidden action replaces rather than exposes older safe history',async t=>{
+test('hidden action clears rather than exposes older safe history',async t=>{
  const {g,p,a}=legalPath((g,a)=>g.phase==='playing'&&a.type==='serve'&&!g.turn.guest&&!g.turn.main&&g.players.find(x=>x.id===actor(g)).cafe.length<3);
  const f=await fixture(t,g);assert.equal((await f.action(p,a)).data.undo.available,true);
  const r=await f.action(p,{type:'guest',guest:4});assert.equal(r.status,200);assert.equal(r.data.undo.available,false);assert.equal((await f.action(p,{type:'undo'})).status,400);
@@ -74,9 +74,9 @@ test('passing and re-rolling cannot be undone',async t=>{
  let g=ready();for(let i=0;i<2;i++){const p=actor(g),f=await fixture(t,g),r=await f.action(p,{type:'pass'});assert.equal(r.status,200);assert.equal(r.data.undo.available,false);assert.equal((await f.action(p,{type:'undo'})).status,400);g=act(g,p,{type:'pass'});}
 });
 function safeDie(g){const face=[1,2,4,6].find(f=>g.dice[f-1]>0);assert.ok(face);return {type:'die',face,...(face===6?{target:4}:{})};}
-test('undo restores only own last game action once, revision increases',async t=>{
+test('one recorded action restores exactly once and revision increases',async t=>{
  const g=ready(),p=actor(g),f=await fixture(t,g),before=await f.state(p);
- assert.deepEqual(before.undo,{available:false,reason:'没有可撤销的操作'});
+ assert.deepEqual(before.undo,{available:false,reason:'没有可撤销的操作',remaining:0});
  const a=safeDie(g),changed=await f.action(p,a);assert.equal(changed.status,200);assert.equal(changed.data.undo.available,true);
  const undone=await f.action(p,{type:'undo'});assert.equal(undone.status,200);assert.deepEqual(undone.data.game,view(g,p));assert.equal(undone.data.revision,2);assert.equal(undone.data.undo.available,false);
  assert.equal((await f.action(p,{type:'undo'})).status,400);
@@ -89,7 +89,7 @@ test('hidden information barriers: guest refill, draw and private offer',async t
   {label:'staff draw',...legalPath((g,a)=>g.phase==='playing'&&g.pending[0]?.effects[a.index]?.type==='draw'&&!a.skip)},
   {label:'private offer',...legalPath((g,a)=>g.phase==='playing'&&g.pending[0]?.effects[a.index]?.type==='offer'&&!g.pending[0].effects[a.index].cards&&!a.skip)}
  ];
- for(const {label,g,p,a} of cases){const f=await fixture(t,g),r=await f.action(p,a);assert.equal(r.status,200,label);assert.equal(r.data.undo.available,false,label);assert.match(r.data.undo.reason,/信息/);assert.equal((await f.action(p,{type:'undo'})).status,400);}
+ for(const {label,g,p,a} of cases){const f=await fixture(t,g,{undoStack:[{player:p,game:g},{player:p,game:g}]}),r=await f.action(p,a);assert.equal(r.status,200,label);assert.equal(r.data.undo.available,false,label);assert.equal(r.data.undo.remaining,0);assert.match(r.data.undo.reason,/信息/);assert.equal((await f.action(p,{type:'undo'})).status,400);const raw=JSON.parse(await readFile(path.join(f.dir,'rooms.json'),'utf8')).ABCDEF;assert.deepEqual(raw.undoStack,[]);}
 });
 test('setup, turn slot, round, emperor and game-end transitions discard history',async t=>{
  const cases=[
@@ -100,5 +100,5 @@ test('setup, turn slot, round, emperor and game-end transitions discard history'
   legalPath((g,a,n)=>g.phase==='playing'&&n.phase==='emperor'),
   legalPath((g,a,n)=>g.phase==='emperor'&&n.phase==='finished')
  ];
- for(const {g,p,a} of cases){const f=await fixture(t,g);const r=await f.action(p,a);assert.equal(r.status,200);assert.equal(r.data.undo.available,false,JSON.stringify({a,phase:g.phase,round:g.round}));assert.equal((await f.action(p,{type:'undo'})).status,400);const raw=JSON.parse(await readFile(path.join(f.dir,'rooms.json'),'utf8')).ABCDEF;assert.equal(raw.undoHistory,null);}
+ for(const {g,p,a} of cases){const f=await fixture(t,g,{undoStack:[{player:p,game:g},{player:p,game:g}]});const r=await f.action(p,a);assert.equal(r.status,200);assert.equal(r.data.undo.available,false,JSON.stringify({a,phase:g.phase,round:g.round}));assert.equal(r.data.undo.remaining,0);assert.equal((await f.action(p,{type:'undo'})).status,400);const raw=JSON.parse(await readFile(path.join(f.dir,'rooms.json'),'utf8')).ABCDEF;assert.equal(raw.undoHistory,null);assert.deepEqual(raw.undoStack,[]);}
 });

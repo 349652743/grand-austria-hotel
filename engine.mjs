@@ -24,10 +24,12 @@ export function canPrepare(p,i) {return integer(i,0,19)&&p.rooms[i]===0&&(p.room
 export function roomCost(p,i,discount=0) {return has(p,{blue:9,red:10,yellow:11}[ROOM_COLORS[i]])?0:Math.max(0,Math.floor(i/5)-discount);}
 function prepare(p,i,discount=0,maxFloor=3) {
  assert(canPrepare(p,i),'只能从左下角开始，并与已准备或入住房间正交相邻');assert(Math.floor(i/5)<=maxFloor,'房间超出允许楼层');
- pay(p,roomCost(p,i,discount));p.rooms[i]=1;if(i>=17)p.vp+=i-15;
+ pay(p,roomCost(p,i,discount));p.rooms[i]=1;(p.roomGuests??=Array(20).fill(null))[i]=null;if(i>=17)p.vp+=i-15;
 }
 function occupy(p,i) {
  assert(integer(i,0,19)&&p.rooms[i]===1,'请选择一间已准备的空房');p.rooms[i]=2;
+ // Missing legacy records and direct effect occupations have no known guest.
+ (p.roomGuests??=Array(20).fill(null))[i]=null;
  const effects=[];if(has(p,23))effects.push(effect('money',1));
  const group=ROOM_GROUPS.findIndex(a=>a.includes(i));
  if(!p.bonuses.includes(group)&&ROOM_GROUPS[group].every(j=>p.rooms[j]===2)) {
@@ -164,7 +166,7 @@ function resolve(g,p,a) {
  else if(x.type==='penalty'){if(a.protect){assert(has(p,26),'没有会议经理');pay(p,1);}else applyPenalty(g,p,x.tile);}
  else if(x.type==='discardHand'){assert(Array.isArray(a.cards)&&a.cards.length===x.n&&new Set(a.cards).size===x.n&&a.cards.every(id=>p.hand.includes(id)),'请选择足够数量且不重复的员工手牌');p.hand=p.hand.filter(id=>!a.cards.includes(id));g.staffDeck.push(...a.cards);}
  else if(x.type==='discardStaff'){assert(p.staff.includes(a.staff)&&STAFF[a.staff].kind==='end','请选择已雇佣的终局员工');p.staff.splice(p.staff.indexOf(a.staff),1);g.staffDiscard.push(a.staff);}
- else if(x.type==='removeRoom') {assert(integer(a.room,0,19)&&p.rooms[a.room]===x.status,'请选择符合条件的房间');const floor=x.floor??Math.max(...p.rooms.map((v,i)=>v===x.status?Math.floor(i/5):-1));assert(Math.floor(a.room/5)===floor,'必须选择指定的最高楼层');p.rooms[a.room]=0;}
+ else if(x.type==='removeRoom') {assert(integer(a.room,0,19)&&p.rooms[a.room]===x.status,'请选择符合条件的房间');const floor=x.floor??Math.max(...p.rooms.map((v,i)=>v===x.status?Math.floor(i/5):-1));assert(Math.floor(a.room/5)===floor,'必须选择指定的最高楼层');p.rooms[a.room]=0;(p.roomGuests??=Array(20).fill(null))[a.room]=null;}
  else throw new Error('未知效果');
 }
 // A mandatory preparation needs one room, not every point of die strength.
@@ -204,7 +206,7 @@ export function createGame(seats,seed=Date.now()) {
  g.market=[];refill(g);
  g.objectives=['A','B','C'].map(group=>({...shuffle(g,OBJECTIVES.filter(o=>o.group===group))[0],claimed:[]}));
  g.emperors=['A','B','C'].map(letter=>structuredClone(shuffle(g,EMPERORS.filter(e=>e.id[0]===letter))[0]));
- g.players=seats.map(({id,name})=>({id,name,money:10,emperor:0,vp:0,kitchen:[1,1,1,1],rooms:Array(20).fill(0),hand:[],staff:[],used:[],cafe:[],bonuses:[],objectives:[]}));
+ g.players=seats.map(({id,name})=>({id,name,money:10,emperor:0,vp:0,kitchen:[1,1,1,1],rooms:Array(20).fill(0),roomGuests:Array(20).fill(null),hand:[],staff:[],used:[],cafe:[],bonuses:[],objectives:[]}));
  for(const p of g.players)drawStaff(g,p,6);
  g.setupOrder=Array.from({length:seats.length},(_,i)=>g.players[(g.start+seats.length-1-i)%seats.length].id);log(g,'酒店开业筹备：逆时针选择首位客人，再准备三间房');return g;
 }
@@ -231,7 +233,7 @@ export function act(previous,playerId,a) {
  } else if(a.type==='checkin') {
   const c=p.cafe.find(c=>c.id===a.guest);assert(c,'该客人不在咖啡厅');const card=GUESTS[c.id];assert(c.served.every((n,i)=>n===card.order[i]),'请先满足客人的全部餐饮需求');
   assert(integer(a.room,0,19)&&(card.color==='green'||ROOM_COLORS[a.room]===card.color),'房间颜色不符合客人的要求');
-  const effects=occupy(p,a.room);p.vp+=card.vp;p.cafe.splice(p.cafe.indexOf(c),1);g.guestDiscard.push(card.id);
+  const effects=occupy(p,a.room);(p.roomGuests??=Array(20).fill(null))[a.room]=card.id;p.vp+=card.vp;p.cafe.splice(p.cafe.indexOf(c),1);g.guestDiscard.push(card.id);
   if(card.color==='red'&&has(p,5))effects.push(effect('money',2));if(card.color==='blue'&&has(p,6))effects.push(effect('favor',1));
   if(card.color==='yellow'&&has(p,7))effects.push(effect('money',1));if(card.color==='green'&&has(p,8))effects.push(effect('points',2));
   if(sum(card.order)>=4&&has(p,33))effects.push(effect('points',4));
