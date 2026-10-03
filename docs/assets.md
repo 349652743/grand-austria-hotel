@@ -7,6 +7,7 @@
 | 出版社原版说明书 | [Lookout 2022 PDF](https://www.lookout-spiele.de/upload/de_grandaustriahotel.html_GAH_Retail21_Rules_152_EN_WEB.pdf) | 原件保留于维护者本地资料库，不随仓库分发；首页渲染成 1489 × 2105 WebP 作封面。PDF 内对应位图约 830–892 × 1173–1263，渲染尺寸不等于新增原始细节。 |
 | 出版社独立封面 | [官方 CoverImage.jpg](https://www.lookout-spiele.de/upload/en_grandaustriahotel.html_CoverImage.jpg) | 核实只有 428 × 600，留作来源参考，未作为高清封面使用。 |
 | 56 客人牌、48 员工牌 | [Yucata 公开规则和卡牌资源](https://www.yucata.de/en/Rules/GrandAustria) | 客人图 188 × 288、员工图约 153 × 144；保持原图，不将放大称为高清。中文效果重绘在图片之外，卡图可点开。 |
+| 12 皇家委托、12 皇帝青睐 | 上述官方 PDF 第 19／20 页 | 提取 PDF 内嵌原始位图，分别为 117 × 180、135 × 166，转 PNG、不放大。逐卡核对编号／效果；保留中文说明。 |
 | 酒店、骰子、标志、轨道与界面 | 本项目原创 HTML/CSS/SVG | 可缩放，避免将低清棋盘图片拉伸后当作交互界面。 |
 | 高清酒店板照片线索 | [BGG 图片 #2703992](https://boardgamegeek.com/image/2703992/grand-austria-hotel) | 搜索索引标示原图 4272 × 2848；实际访问返回 403，未下载、未用于应用，也未绕过限制。 |
 
